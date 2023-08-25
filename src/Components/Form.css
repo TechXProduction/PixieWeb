@@ -1,0 +1,12 @@
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    /* ... otros estilos ... */
+    background: none; /* Cambia el fondo a 'none' para eliminarlo */
+    /* o */
+    background-color: black; /* Cambia el color de fondo a tu elección */
+    /* ... otros estilos ... */
+  }
+
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    height: 80px;
+    width: "50%";
+  }
