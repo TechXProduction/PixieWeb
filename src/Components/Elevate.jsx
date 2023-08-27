@@ -2,12 +2,17 @@ import React from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import VideoPixie from "../assets/Video.mp4"
+import Casaimg from "../assets/casa.png"
+import Rematesimg from "../assets/remates.png"
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { Box, Grid, Typography, Button } from "@mui/material";
 
 export const Elevate = ({handleLetsChatClick}) => {
     const is990 = useMediaQuery('(max-width:990px)');
+    const is1024 = useMediaQuery('(max-width:1024px)');
     const is620 = useMediaQuery('(max-width:620px)');
+    const is391 = useMediaQuery('(max-width:391px)');
 
     const overlayStyle = {
       position: "absolute",
@@ -36,7 +41,7 @@ export const Elevate = ({handleLetsChatClick}) => {
             loop
             style={{
               width: "100%",
-              height: "100%",
+              height: is1024?(is620?"550px":"550px"):"900px",
               objectFit: "cover",
               background:"linear-gradient(90deg, rgba(0, 0, 0, 0.50) 49.48%, rgba(0, 0, 0, 0.00) 100%)"
             }}
@@ -45,19 +50,24 @@ export const Elevate = ({handleLetsChatClick}) => {
             Your browser does not support the video tag.
           </video>
         <div style={overlayStyle}>
+          <Box sx={{display:"flex", justifyContent:"center"}}>
           <Grid
             sx={{
               width: "100%",
               display: "flex",
-              justifyContent: "center",
-              paddingBottom: "160px",
-              paddingTop: "150px",
+              //justifyContent: "center",
+              paddingBottom: "190px",
+              paddingTop: is1024?"150px":"160px",
               zIndex: 2,
+              marginInline:"5%",
+              alignItems:is1024?"":"center",
+              
+              height:"1000px"
             }}
           >
             <Grid
               sx={{ display: "flex", margin: is990 ? "16px" : "" }}
-              maxWidth={"951px"}
+              //maxWidth={"951px"}
               container
               spacing={0}
               direction={"column"}
@@ -69,15 +79,17 @@ export const Elevate = ({handleLetsChatClick}) => {
                 data-aos-delay="200"
                 sx={{
                   fontWeight: "500",
-                  fontSize: is620 ? "36px" : "90px",
+                  fontSize: is1024 ? (is620?"27px":"48px") : "76px",
                   color: "white",
-                  lineHeight: is620 ? "46px" : "94px",
+                  lineHeight: is1024 ? (is620?"46px":"68px")  : "94px",
                   marginBottom: "40px",
                   textShadow:"1px",
                   textShadow: "0px 0px 15px rgba(0,0,0,0.3)", // Agregar sombra al texto
                             // Si deseas agregar contorno:
                             // WebkitTextStroke: "1px black",
-
+                  width:"90%",
+                  fontWeight:"600",
+                  maxWidth:"900px"
                 }}
               >
                 CONOCE NUESTROS REMATES INMOBILIARIOS
@@ -88,18 +100,72 @@ export const Elevate = ({handleLetsChatClick}) => {
                 data-aos-delay="200"
                 sx={{
                   fontWeight: "400",
-                  fontSize: "20px",
+                  fontSize: is1024?"14px":"20px",
                   marginBottom: "83px",
                   color: "white",
                   lineHeight: "24px",
                   textShadow: "0px 0px 15px rgba(0,0,0,0.3)",
+                  width:"90%"
                 }}
               >
                 En Pixie brindamos un servicio de valor con la mejor experiencia.
               </Typography>
-              <Box></Box>
+              
             </Grid>
+            <Box sx={{ borderRadius:"6px",background:"#30589E", position:"absolute", marginTop:is1024?"380px":"750px", width:"90%", maxWidth:"1300px"}}>
+            <Grid sx={{alignItems:"center"}} container spacing={2}>
+            <Grid item xs={is1024?12:5}>
+              <Box sx={{display:"flex", flexDirection:"column", padding:"30px"}}>
+                <Typography sx={{color:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500"}}>
+                Llámanos, o manda mensaje para encontrar tu propiedad ideal.
+                </Typography>
+                <a style={{textDecoration:"none"}} href="https://wa.link/dqjg26">
+                <Typography sx={{marginTop:"8px",cursor:"pointer",color:"white",background:"#69727d", width:"100%",display:"flex",alignItems:"center", justifyContent:"center",padding:"12px 24px",borderRadius:"8px",olor:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500", 
+                transition:"0.3s",
+                '&:hover': {
+                  background: '#25D366', // Cambiamos el color de fondo al color de WhatsApp al pasar el cursor
+                  color: 'white', // Cambiamos el color del texto al pasar el cursor
+                  '& .whatsapp-icon': {
+                    color: 'white', // Cambiamos el color del ícono al pasar el cursor
+                  },}
+              }}>
+                <WhatsAppIcon sx={{ fontSize: 20, marginRight: '0.5em' }} />
+                662 236 4568
+                </Typography></a>
+                
+              </Box>
+            </Grid>
+            <Grid item xs={is1024?6:4}>
+            <Box sx={{display:"flex", flexDirection:"column", padding:"20px"}}>
+            <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
+              <img style={{width:"50px", height:"50px"}} src={Casaimg} alt="casa" />
+              </Box>
+              <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
+                <Typography sx={{color:"white", textAlign:"center", fontSize:is620?"14px":"20px", lineHeight:"1.5em", fontWeight:"500"}}>
+                COMPRA VENTA
+                </Typography>
+                </Box>
+                
+              </Box>
+            </Grid>
+            <Grid item xs={is1024?6:3}>
+            <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
+            <Box sx={{display:"flex", flexDirection:"column", padding:"20px"}}>
+            <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
+            <img style={{width:"50px", height:"50px"}} src={Rematesimg} alt="casa" />
+            </Box>
+                <Typography sx={{height:is391?"42px":"",color:"white", fontSize:is620?"14px":"20px", lineHeight:"1.5em", fontWeight:"500"}}>
+                REMATES
+                </Typography>
+                
+              </Box></Box>
+            </Grid>
+            </Grid>
+            </Box>
           </Grid>
+          
+          </Box>
+          
         </div>
       </div>
     );
