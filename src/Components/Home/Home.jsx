@@ -3,7 +3,9 @@ import React, {useRef, useEffect, useState} from 'react'
 import { NavBar } from '../NavBar'
 
 
-import { Elevate } from '../Elevate'
+
+import { Elevate } from './Elevate'
+
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -73,7 +75,9 @@ export const Home = ()=>{
 
         <div id='lets-chat'  >
         <Elevate handleLetsChatClick={handleLetsChatClick}/>
+        
         </div>
+        
 
         {/* <div id='lets-header'ref={letsLogoRef} style={{paddingBottom:is600?"46px":"82px"}}></div>
 

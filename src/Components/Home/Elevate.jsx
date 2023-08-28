@@ -1,12 +1,15 @@
 import React from "react";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import VideoPixie from "../assets/Video.mp4"
-import Casaimg from "../assets/casa.png"
-import Rematesimg from "../assets/remates.png"
+import VideoPixie from "./../../assets/Video.mp4"
+
+import Casaimg from "./../../assets/casa.png"
+import Rematesimg from "./../../assets/remates.png"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { Box, Grid, Typography, Button } from "@mui/material";
+
+import { AboutHome } from "./AboutHome";
 
 export const Elevate = ({handleLetsChatClick}) => {
     const is990 = useMediaQuery('(max-width:990px)');
@@ -24,15 +27,17 @@ export const Elevate = ({handleLetsChatClick}) => {
     };
 
     return (
+      <div style={{display:"flex", flexDirection:"column", position:"relative"}}>
       <div
         style={{
           position: "relative",
-          paddingBottom: is620 ? "711px" : "773px",
-          overflow: "hidden",
-          
+          //paddingBottom: is620 ? "700px" : "500px",
+          //overflow: "hidden",
+         
           background:"green",
           background: `url("${VideoPixie}")`,
           backgroundSize: "cover",
+         
         }}
       >
         <video
@@ -49,8 +54,11 @@ export const Elevate = ({handleLetsChatClick}) => {
             <source src={VideoPixie} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <Box sx={{display:"flex", justifyContent:"center"}}>
         <div style={overlayStyle}>
           <Box sx={{display:"flex", justifyContent:"center"}}>
+            <Box sx={{width:"1440px"}}>
+            
           <Grid
             sx={{
               width: "100%",
@@ -60,9 +68,11 @@ export const Elevate = ({handleLetsChatClick}) => {
               paddingTop: is1024?"150px":"160px",
               zIndex: 2,
               marginInline:"5%",
+              
               alignItems:is1024?"":"center",
               
-              height:"1000px"
+              height:"1000px",
+              
             }}
           >
             <Grid
@@ -162,11 +172,24 @@ export const Elevate = ({handleLetsChatClick}) => {
             </Grid>
             </Grid>
             </Box>
+            
           </Grid>
           
           </Box>
-          
+          </Box>
+         
         </div>
+        </Box>
+        <div>
+      <Box sx={{display:"flex", justifyContent:"center", width:"100%", background:"#0c141e", marginTop:"-7px"}}>
+        <Box sx={{width:"100%",maxWidth:"1440px"}}>
+          <AboutHome/>
+        </Box>
+
+      </Box>
+      </div>
+      </div>
+      
       </div>
     );
 };
