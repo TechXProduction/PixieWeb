@@ -23,7 +23,7 @@ export const Elevate = ({handleLetsChatClick}) => {
       right: 0,
       width: "100%",
       height: "100%",
-      zIndex: 2,
+      zIndex: 1,
     };
 
     return (
@@ -67,7 +67,8 @@ export const Elevate = ({handleLetsChatClick}) => {
               paddingBottom: "190px",
               paddingTop: is1024?"150px":"160px",
               zIndex: 2,
-              marginInline:"5%",
+              justifyContent:"center",
+              //marginInline:"5%",
               
               alignItems:is1024?"":"center",
               
@@ -76,7 +77,7 @@ export const Elevate = ({handleLetsChatClick}) => {
             }}
           >
             <Grid
-              sx={{ display: "flex", margin: is990 ? "16px" : "" }}
+              sx={{ display: "flex", margin: is990 ? "16px" : "", marginInline:"5%" }}
               //maxWidth={"951px"}
               container
               spacing={0}
@@ -97,7 +98,7 @@ export const Elevate = ({handleLetsChatClick}) => {
                   textShadow: "0px 0px 15px rgba(0,0,0,0.3)", // Agregar sombra al texto
                             // Si deseas agregar contorno:
                             // WebkitTextStroke: "1px black",
-                  width:"90%",
+                  width:"80%",
                   fontWeight:"600",
                   maxWidth:"900px"
                 }}
@@ -115,7 +116,7 @@ export const Elevate = ({handleLetsChatClick}) => {
                   color: "white",
                   lineHeight: "24px",
                   textShadow: "0px 0px 15px rgba(0,0,0,0.3)",
-                  width:"90%"
+                  width:"80%"
                 }}
               >
                 En Pixie brindamos un servicio de valor con la mejor experiencia.
@@ -181,7 +182,7 @@ export const Elevate = ({handleLetsChatClick}) => {
         </div>
         </Box>
         <div>
-      <Box sx={{display:"flex", justifyContent:"center", width:"100%", background:"#0c141e", marginTop:"-7px"}}>
+      <Box sx={{position:"relative",display:"flex", justifyContent:"center", width:"100%", background:"#0c141e", marginTop:"-7px"}}>
         <Box sx={{width:"100%",maxWidth:"1440px"}}>
           <AboutHome/>
         </Box>
