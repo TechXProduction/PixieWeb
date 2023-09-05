@@ -1,11 +1,11 @@
 import React, {useRef, useEffect, useState} from 'react'
 
 import { NavBar } from '../NavBar'
-
-
-
 import { Elevate } from './Elevate'
-
+import { Guia } from "./Guia"
+import { Pilares  } from './Pilares'
+import  {InfoGrid} from './InfoGrid'
+import { Footer } from '../Footer'
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -77,8 +77,15 @@ export const Home = ()=>{
         <Elevate handleLetsChatClick={handleLetsChatClick}/>
         
         </div>
-        
 
+        <Guia/>
+        
+        <div position={"relative"} style={{background:"#F6F7F9",paddingTop:"100px", paddingBottom:"100px"}}>
+<Pilares/>
+        </div>
+
+        <InfoGrid/>
+        <Footer/>
         {/* <div id='lets-header'ref={letsLogoRef} style={{paddingBottom:is600?"46px":"82px"}}></div>
 
 

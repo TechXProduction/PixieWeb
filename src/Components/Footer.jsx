@@ -7,10 +7,14 @@ import { Link } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import theme from '../theme/theme';
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
 
 // imagenes 
 
-import logofooter from "../assets/logofooter.svg"
+import logofooter from "../assets/logo-footer.png"
 import logoin from "../assets/Linkedin.svg"
 import logoemail from "../assets/email.svg"
 import logowhatsapp from "../assets/Whatsapp.svg"
@@ -26,7 +30,7 @@ export const Footer = () =>{
 
   return (
     <footer>
-    <Box sx={{  background:background, minHeight:isMobile?"360px":"223px", width:"100%", display:"flex", justifyContent:"center",  }}>
+    <Box sx={{  background:"#233F5D", minHeight:isMobile?"360px":"223px", width:"100%", display:"flex", justifyContent:"center",  }}>
       
       
       <Grid container spacing={{ xs: 0, sm:0, md: 0 }} columns={{ xs: 4, sm: 12, md: 12 }} sx={{padding:"0px", width:"100%",maxWidth:"1300px"}}>
@@ -64,50 +68,34 @@ export const Footer = () =>{
 
             {isMobile?
              <>
-             <Grid xs={8} sm={4} md={4} key={3}>
+             <Grid sx={{marginTop:"120px"}} xs={8} sm={4} md={4} key={3}>
           <Box sx={{ marginTop: "-32px" }}>
   <Grid container spacing={"11px"} sx={{ display: "flex", justifyContent: "center", alignItems:"center" }}>
     <Grid item sx={{paddingBottom:"0px"}}>
 
-    <a href="https://www.linkedin.com/company/boosttalent-io/" target="_blank">
-      <Box sx={{ maxWidth: "32px", maxHeight: "32px"}}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="50px"
-          image={logoin}
-        />
-      </Box>
+    <a style={{color:"white"}} href="https://www.facebook.com/pixiebienesraices/" target="_blank">
+      
+      <FacebookIcon />
+      
       </a>
       
     </Grid>
     <Grid item sx={{paddingBottom:"0px"}}>
 
-    <a href="mailto:hello@boosttalent.io" target="_blank">
-      <Box sx={{ maxWidth: "32px", minWidth:"32px",maxHeight: "32px", minHeight:"32px" }}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="30px"
-          
-          image={logoemail}
-        />
-      </Box>
+    <a style={{color:"white"}} href="https://www.facebook.com/pixiebienesraices/" target="_blank">
+      
+      <InstagramIcon />
+      
       </a>
 
     </Grid>
     <Grid item sx={{paddingBottom:"0px"}}>
 
 
-    <a href="https:wa.me/+5493516546411" target="_blank">
-      <Box sx={{ maxWidth: "32px", maxHeight: "32px" }}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="50px"
-          image={logowhatsapp}
-        />
-      </Box>
+    <a style={{color:"white"}} href="https://pixiebr.com/" target="_blank">
+      
+      <TwitterIcon />
+      
       </a>
 
 
@@ -120,14 +108,14 @@ export const Footer = () =>{
                <Box>
                    <Box sx={{marginTop:isMobile?"-32px":"107px",display:"flex", justifyContent:"center",  height:"35px", alignItems:"flex-end" }}>
                        <Typography sx={{color: colorfont,fontSize:"14px", fontStyle:"normal", fontWeight:"500", textAlign:"center"}}>
-                       ®boosttalent 2023
+                       ®Pixie 2023
                        </Typography>
                    </Box>
                    <Box sx={{marginTop:isMobile?"56px":"9px",display:"flex", justifyContent:"center",  height:"35px", alignItems:"flex-end" }}>
                     <Typography sx={{ color: colorfont, fontSize: "10px", fontStyle: "normal", fontWeight: "500", textAlign: "center" }}>
-                      Made with magic by{" "}
-                        <Link href="https://theplannerteam.com" underline="always" style={{ color: "white", textDecorationColor: "white" }}>
-                          PlannerTeam
+                      Copyrigth{" "}
+                        <Link href="https://pixiebr.com" underline="always" style={{ color: "white", textDecorationColor: "white" }}>
+                          Pixie
                           </Link>
                         </Typography>
                    </Box>
@@ -143,14 +131,14 @@ export const Footer = () =>{
             <Box>
                 <Box sx={{marginTop:isMobile?"0px":"127px",display:"flex", justifyContent:"center",  height:"35px", alignItems:"flex-end" }}>
                     <Typography sx={{color: colorfont,fontSize:"14px", fontStyle:"normal", fontWeight:"500", textAlign:"center"}}>
-                    ®boosttalent 2023
+                    ®Pixie 2023
                     </Typography>
                 </Box>
                 <Box sx={{marginTop:isMobile?"0px":"0px",display:"flex", justifyContent:"center",  height:"35px", alignItems:"flex-end" }}>
                 <Typography sx={{ color: colorfont, fontSize: "10px", fontStyle: "normal", fontWeight: "500", textAlign: "center" }}>
-                Made with magic by{" "}
-                    <Link href="https://theplannerteam.com/" underline="always" style={{ color: "white", textDecorationColor: "white", }}>
-                     PlannerTeam
+                Copyrigth{" "}
+                    <Link href="https://pixiebr.com/" underline="always" style={{ color: "white", textDecorationColor: "white", }}>
+                     Pixie
                     </Link>
                 </Typography>
                 </Box>
@@ -163,15 +151,10 @@ export const Footer = () =>{
 
       {/* LINK EMAIL DESKTOP */}
 
-    <a href="https://www.linkedin.com/company/boosttalent-io/" target="_blank">
-      <Box sx={{ maxWidth: "32px", maxHeight: "32px"}}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="50px"
-          image={logoin}
-        />
-      </Box>
+    <a style={{color:"white"}} href="https://www.facebook.com/pixiebienesraices/" target="_blank">
+      
+      <FacebookIcon />
+      
       
       </a>
     </Grid>
@@ -179,30 +162,19 @@ export const Footer = () =>{
 
       {/* LINK EMAIL DESKTOP */}
 
-    <a href="mailto:hello@boosttalent.io" target="_blank">
-      <Box sx={{ maxWidth: "32px", maxHeight: "32px", minWidth:"32px", minHeight:"28px" }}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="20px"
-          image={logoemail}
-        />
-      </Box></a>
+    <a style={{color:"white"}} href="https://www.facebook.com/pixiebienesraices/" target="_blank">
+      
+        <InstagramIcon/>
+      </a>
     </Grid>
     <Grid item sx={{paddingBottom:"0px", paddingLeft:"0px"}}>
 
     {/* LINK WHATSAPP DESKTOP */}
 
-    <a href="https://wa.me/+5493516546411" target="_blank">
-      <Box sx={{ maxWidth: "31px", maxHeight: "32px" }}>
-        <CardMedia
-          component="img"
-          alt="Imagen"
-          maxWidth="50px"
-          image={logowhatsapp}
-          
-        />
-      </Box></a>
+    <a style={{color:"white"}} href="https://pixiebr.com/" target="_blank">
+      
+        <TwitterIcon/>
+      </a>
 
 
     </Grid>

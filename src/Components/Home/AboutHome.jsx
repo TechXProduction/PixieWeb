@@ -8,7 +8,7 @@ export const AboutHome = ()=>{
     const is620 = useMediaQuery('(max-width:620px)');
     return(
         <div style={{background:"#0c141e", marginTop:"", display:"flex", alignItems:"center", justifyContent:"center"}}>
-            <Box sx={{background:"#0c141e",position:"relative", width:"100%", marginInline:"5%", marginTop:is1024?"":"0%", paddingTop:is1024?"40vh":"15vh", paddingBottom:is1024?"15vh":"15vh"}}>
+            <Box sx={{background:"#0c141e",position:"relative", width:"100%", marginInline:"5%", marginTop:is1024?"":"0%", paddingTop:is1024?"60vh":"30vh", paddingBottom:is1024?"30vh":"30vh"}}>
                 <Grid sx={{display:"flex", alignItems:is1024?"flex-end":"center"}} container spacing={2}>
                     <Grid item xs={is1024?12:8.5}>
                         <Box sx={{display:"flex", flexDirection:"column"}}> 

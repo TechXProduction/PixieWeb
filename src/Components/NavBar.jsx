@@ -15,6 +15,7 @@ import { Box } from "@mui/material";
 
 export const NavBar = ({handleLetsChatClick, handleLetsPricingClick, handleLetsWorkClick, handleLetsLogoClick}) => {
   const is600 = useMediaQuery('(max-width:600px)');
+  const is620 = useMediaQuery('(max-width:620px)');
 
 const BoxWrapper = styled("div")({
   backgroundColor: "transparent",
@@ -35,13 +36,14 @@ const DivNavbarWrapper = styled("div")({
 const DivNavbar = styled("div")({
   backgroundColor: "white",
   boxShadow: "0px 0px 20px #2929291a",
-  height: is600?"92px":"113px",
-  left: 0,
+  height: is600?"80px":"113px",
+  //left: 0,
   position: "fixed",
-  top: 0,
+  //top: 0,
   width: "100%",
   display:"flex",
-  alignItems:"center"
+  alignItems:"center",
+  justifyContent:"space-between",
 });
 
 const Frame = styled(Container)({
@@ -51,6 +53,8 @@ const Frame = styled(Container)({
   maxWidth: "1440px",
   padding: "14px 0",
   width: "100%",
+  justifyContent:"space-between",
+  marginTop:is620?"20px":""
 });
 
 const ElementLogoTurquesaSin = styled("img")({
@@ -131,10 +135,12 @@ const SignUp = styled("div")({
 });
 
 const MobileButton = styled(Button)({
-  marginTop:"-16px",
+  
+  background:"#30589E",
+  marginTop:"-18px",
   color: "#ffffff",
   "&:hover": {
-    background: "transparent",
+    background: "#30587E",
   },
 });
 
@@ -142,8 +148,8 @@ const MobileButton = styled(Button)({
 
 const DropdownMenu = styled("div")({
   position: "absolute",
-  top: "46px",
-  backgroundColor: "#2d2d2d",
+  top: "80px",
+  backgroundColor: "#30589E",
   width: "100%",
   boxShadow: "0px 0px 20px #2929291a",
   display: "flex",
@@ -154,7 +160,7 @@ const DropdownContent = styled(Container)({
   display: "flex",
   justifyContent: "center",
   flexDirection:"column",
-  margin: "0 auto",
+  margin: "20px auto",
   maxWidth: "1440px",
   padding: "0",
   width: "100%",
@@ -208,13 +214,14 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
       <DivNavbarWrapper>
         <DivNavbar>
           <Frame>
+            
           <div style={{ cursor: "pointer" }}>
             <ElementLogoTurquesaSin
               alt="Element logo turquesa sin"
               src={LogoBost}
               onClick={handleLetsLogoClick}
               cursor="pointer"
-              width={is600?"25px":"100%"}
+              width={is600?"100%":"100%"}
               height={is600?"40px":"100%"}
             />
             </div>
@@ -232,7 +239,8 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
                       
                       <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
                       <ButtonStyled onClick={ () => {handleLetsChatClick(); handleToggleMenu()}}>
-                        <SignUp>Let’s Chatss</SignUp>
+                        <a style={{textDecoration:"none"}} href="https://api.whatsapp.com/send?phone=5216624003935">
+                        <SignUp>Whatsapp</SignUp></a>
                       </ButtonStyled>
                       </Box>
                     </DropdownContent>
