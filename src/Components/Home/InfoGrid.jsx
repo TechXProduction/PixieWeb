@@ -46,7 +46,10 @@ export const InfoGrid = () => {
       }}
     >
         <Box sx={{display:"flex", flexDirection:"column", width:"100%"}}>
-            <Box sx={{width:"100%", display:"flex",justifyContent:"center"}}>
+            <Box data-aos="zoom-in"
+                data-aos-duration={1500}
+                data-aos-delay="200"
+                 sx={{width:"100%", display:"flex",justifyContent:"center"}}>
                <Typography sx={{fontSize:is620?"22px":"30px", color:"white",textAlign:"center"}}>
                EXPERIENCIA E INNOVACION
             </Typography> 
@@ -54,7 +57,11 @@ export const InfoGrid = () => {
             
         <Box sx={{display:"flex", justifyContent:"center",width:"100%"}}>
       <Grid sx={{width:"90%"}} container spacing={2}>
-        <Grid item xs={12} sm={4}>
+        <Grid 
+        data-aos="zoom-in"
+        data-aos-duration={1500}
+        data-aos-delay="200"
+        item xs={12} sm={4}>
         <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
           <div sx={{ textAlign: 'center', p: 2, display:"flex",justifyContent:"center"  }}>
             <h2 style={{fontSize:is620?"25px":"60px", marginBottom:"-20px",color:"white",display:"flex", justifyContent:"center"}}>{count1} K+</h2>
@@ -62,7 +69,11 @@ export const InfoGrid = () => {
           </div>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid 
+        data-aos="zoom-in"
+        data-aos-duration={1500}
+        data-aos-delay="600"
+        item xs={12} sm={4}>
         <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
           <div sx={{ textAlign: 'center', p: 2, display:"flex",justifyContent:"center"  }}>
             <h2 style={{fontSize:is620?"25px":"60px", marginBottom:"-20px",color:"white",display:"flex", justifyContent:"center"}}>{count2} K+</h2>
@@ -70,7 +81,11 @@ export const InfoGrid = () => {
           </div>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid 
+        data-aos="zoom-in"
+        data-aos-duration={1500}
+        data-aos-delay="1000"
+        item xs={12} sm={4}>
         <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
           <div sx={{ textAlign: 'center', p: 2, display:"flex",justifyContent:"center"  }}>
             <h2 style={{fontSize:is620?"25px":"60px", marginBottom:"-20px",color:"white",display:"flex", justifyContent:"center"}}>{count3} +</h2>

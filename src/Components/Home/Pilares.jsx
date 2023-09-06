@@ -15,11 +15,19 @@ export const Pilares = ()=>{
         <Box sx={{display:"flex", justifyContent:"column", width:"100%"}}>
             <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
                 <Box sx={{display:"flex", flexDirection:"column",width:"100%"}}>
-                <Typography sx={{color:"#307BD7", textAlign:"center", fontSize:"18px",fontWeight:"600"}}>
+                <Typography
+                data-aos="fade"
+                data-aos-duration={1500}
+                data-aos-delay="200"
+                 sx={{color:"#307BD7", textAlign:"center", fontSize:"18px",fontWeight:"600"}}>
                 PIXIE
                 </Typography>
 
-                <Typography sx={{fontSize:"46px", textAlign:"center", fontWeight:"600", color:"#181A20",marginBottom:"36px"}}>
+                <Typography
+                data-aos="fade"
+                data-aos-duration={1500}
+                data-aos-delay="400"
+                 sx={{fontSize:"46px", textAlign:"center", fontWeight:"600", color:"#181A20",marginBottom:"36px"}}>
                 NUESTROS PILARES
                 </Typography>
 
@@ -27,7 +35,11 @@ export const Pilares = ()=>{
 
                     <Box sx={{width:"90%",background:""}}>
                     <Grid container spacing={2}>
-                        <Grid item xs={is800?12:4} >
+                        <Grid 
+                        data-aos="zoom-in"
+                        data-aos-duration={1500}
+                        data-aos-delay={is620?"200":"200"}
+                        item xs={is800?12:4} >
                             <Box sx={{display:"flex", flexDirection:"column"}}>
                             <Box sx={{display:"flex", justifyContent:"center", width:is800?"100%":"95%", background:"white"}}>
                                     <img src={img1} style={{ objectFit: "cover", width: "100%", height: "100%", maxWidth:"178px" }} alt="" />
@@ -45,7 +57,11 @@ export const Pilares = ()=>{
                             </Box>
                             </Box>
                         </Grid>
-                        <Grid item xs={is800?12:4}>
+                        <Grid 
+                        data-aos="zoom-in"
+                        data-aos-duration={1500}
+                        data-aos-delay={is620?"200":"600"}
+                        item xs={is800?12:4}>
                             <Box sx={{display:"flex", justifyContent:"center", width:is800?"100%":"95%", background:"white"}}>
                             <img src={img2} style={{ objectFit: "cover", width: "100%", height: "100%", maxWidth:"178px" }} alt="" />
                             </Box>
@@ -60,7 +76,11 @@ export const Pilares = ()=>{
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={is800?12:4}>
+                        <Grid 
+                        data-aos="zoom-in"
+                        data-aos-duration={1500}
+                        data-aos-delay={is620?"200":"1000"}
+                        item xs={is800?12:4}>
                             <Box sx={{display:"flex", justifyContent:"center", width:is800?"100%":"95%", background:"white"}}>
                             <img src={img3} style={{ objectFit: "cover", width: "100%", height: "100%", maxWidth:"178px" }} alt="" />
                             

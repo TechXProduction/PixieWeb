@@ -12,17 +12,29 @@ export const AboutHome = ()=>{
                 <Grid sx={{display:"flex", alignItems:is1024?"flex-end":"center"}} container spacing={2}>
                     <Grid item xs={is1024?12:8.5}>
                         <Box sx={{display:"flex", flexDirection:"column"}}> 
-                            <Typography sx={{color:"#307BD7", fontSize:"18px", marginBottom:"20px"}}>
+                            <Typography 
+                            data-aos="fade-right"
+                            data-aos-duration={1500}
+                            data-aos-delay="200"
+                             sx={{color:"#307BD7", fontSize:"18px", marginBottom:"20px"}}>
                                 SOBRE NOSOTROS
                             </Typography>
-                            <Typography sx={{color:"white", fontSize:is620?"26px":"40px", width:"100%", fontWeight:"500", width:"95%"}}>
+                            <Typography
+                            data-aos="fade"
+                            data-aos-duration={1500}
+                            data-aos-delay="800"
+                             sx={{color:"white", fontSize:is620?"26px":"40px", width:"100%", fontWeight:"500", width:"95%"}}>
                             SOMOS UNA MARCA INMOBILIARIA BASADA EN INNOVACIÓN Y EXPERIENCIA
                             </Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={is1024?12:3.5}>
                         
-                    <Box sx={{display:"flex", position:"absolute", zIndex:"2", cursor:"pointer", justifyContent:"end", marginBottom:is620?"10px":""}}>
+                    <Box 
+                    data-aos="fade"
+                    data-aos-duration={1500}
+                    data-aos-delay="1000"
+                     sx={{display:"flex", position:"absolute", zIndex:"2", cursor:"pointer", justifyContent:"end", marginBottom:is620?"10px":""}}>
                         <Typography sx={{background:"#30589E", maxWidth:"263px", borderRadius:"2px", color:"white", padding:"15px 20px", fontSize:is1060?"0.9rem":"1rem", fontWeight:"600", }}>
 
                         MÁS SOBRE NOSOTROS <span> </span>

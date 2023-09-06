@@ -123,15 +123,26 @@ export const Elevate = ({handleLetsChatClick}) => {
               </Typography>
               
             </Grid>
-            <Box sx={{ borderRadius:"6px",background:"#30589E", position:"absolute", marginTop:is1024?"380px":"750px", width:"90%", maxWidth:"1300px"}}>
+            <Box 
+            data-aos="fade"
+            data-aos-duration={1500}
+            data-aos-delay="200"
+            sx={{ borderRadius:"6px",background:"#30589E", position:"absolute", marginTop:is1024?"380px":"750px", width:"90%", maxWidth:"1300px"}}>
             <Grid sx={{alignItems:"center"}} container spacing={2}>
             <Grid item xs={is1024?12:5}>
               <Box sx={{display:"flex", flexDirection:"column", padding:"30px"}}>
-                <Typography sx={{color:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500"}}>
+                <Typography
+                data-aos="fade"
+                data-aos-duration={1500}
+                data-aos-delay="200"
+                 sx={{color:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500"}}>
                 Llámanos, o manda mensaje para encontrar tu propiedad ideal.
                 </Typography>
                 <a style={{textDecoration:"none"}} href="https://wa.link/dqjg26">
-                <Typography sx={{marginTop:"8px",cursor:"pointer",color:"white",background:"#69727d", width:"100%",display:"flex",alignItems:"center", justifyContent:"center",padding:"12px 24px",borderRadius:"8px",olor:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500", 
+                <Typography data-aos="fade-down"
+                data-aos-duration={1500}
+                data-aos-delay="200"
+                 sx={{marginTop:"8px",cursor:"pointer",color:"white",background:"#69727d", width:"100%",display:"flex",alignItems:"center", justifyContent:"center",padding:"12px 24px",borderRadius:"8px",olor:"white", fontSize:"20px", lineHeight:"1.5em", fontWeight:"500", 
                 transition:"0.3s",
                 '&:hover': {
                   background: '#25D366', // Cambiamos el color de fondo al color de WhatsApp al pasar el cursor
@@ -147,7 +158,11 @@ export const Elevate = ({handleLetsChatClick}) => {
               </Box>
             </Grid>
             <Grid item xs={is1024?6:4}>
-            <Box sx={{display:"flex", flexDirection:"column", padding:"20px"}}>
+            <Box 
+            data-aos="fade-up"
+            data-aos-duration={1500}
+            data-aos-delay="1000"
+            sx={{display:"flex", flexDirection:"column", padding:"20px"}}>
             <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
               <img style={{width:"50px", height:"50px"}} src={Casaimg} alt="casa" />
               </Box>
@@ -160,7 +175,11 @@ export const Elevate = ({handleLetsChatClick}) => {
               </Box>
             </Grid>
             <Grid item xs={is1024?6:3}>
-            <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
+            <Box 
+            data-aos="fade-up"
+            data-aos-duration={1500}
+            data-aos-delay="1200"
+            sx={{display:"flex", width:"100%", justifyContent:"center"}}>
             <Box sx={{display:"flex", flexDirection:"column", padding:"20px"}}>
             <Box sx={{display:"flex", width:"100%", justifyContent:"center"}}>
             <img style={{width:"50px", height:"50px"}} src={Rematesimg} alt="casa" />

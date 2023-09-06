@@ -15,10 +15,15 @@ export const Guia = () =>{
       {/* Primera columna */}
       <Grid item xs={is1024?12:6}>
         
-          <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+          <Box
+          data-aos="fade"
+          data-aos-duration={1500}
+          data-aos-delay="200"
+           sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
             <Box sx={{display:"flex", justifyContent:"center", width:"100%", marginTop:is620?"40px":"160px"}}>
                 
-                <Typography sx={{fontWeight:"bold", color:"#181A20", fontSize:is620?"22px":"40px", width:"90%"}}>
+                <Typography 
+                sx={{fontWeight:"bold", color:"#181A20", fontSize:is620?"22px":"40px", width:"90%"}}>
                 TU GUÍA PARA VENDER O COMPRAR TU PROPIEDAD CON EL MEJOR TRATO.
                 </Typography>
                 
@@ -32,7 +37,11 @@ export const Guia = () =>{
                 
             </Box>
 
-            <Box sx={{display:"flex", position:"", marginTop:"32px", zIndex:"2", cursor:"pointer", justifyContent:"start", marginBottom:is620?"10px":"", marginLeft:"5%"}}>
+            <Box
+            data-aos="fade"
+            data-aos-duration={1500}
+            data-aos-delay="300"
+            sx={{display:"flex", position:"", marginTop:"32px", zIndex:"2", cursor:"pointer", justifyContent:"start", marginBottom:is620?"10px":"", marginLeft:"5%"}}>
                         <Typography sx={{background:"#30589E", maxWidth:"263px", borderRadius:"2px", color:"white", padding:"15px 20px", fontSize:is1060?"0.9rem":"1rem", fontWeight:"600", }}>
 
                         COMPRA-VENTA <span> </span>
@@ -46,7 +55,11 @@ export const Guia = () =>{
       {/* Segunda columna */}
       <Grid item xs={is1024?12:6}>
         
-          <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", width:"100%", height:"100%"}}>
+          <Box
+          data-aos="fade"
+          data-aos-duration={1500}
+          data-aos-delay="350"
+           sx={{display:"flex", justifyContent:"center", alignItems:"center", width:"100%", height:"100%"}}>
             <img style={{width:"90%", maxWidth:"488px"}} src={GuiaImg} alt="GuiaImg" />
           </Box>
         
