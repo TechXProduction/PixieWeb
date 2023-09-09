@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Grid,Typography } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GuiaImg from "../../assets/Guia.png"
+import { Link } from 'react-router-dom';
+
 
 
 export const Guia = () =>{
@@ -36,11 +38,11 @@ export const Guia = () =>{
                 </Typography>
                 
             </Box>
-
+<Link to={"/contact"} style={{textDecoration:"none"}}>
             <Box
             data-aos="fade"
             data-aos-duration={800}
-            data-aos-delay="400"
+            data-aos-delay="300"
             sx={{display:"flex", position:"", marginTop:"32px", zIndex:"2", cursor:"pointer", justifyContent:"start", marginBottom:is620?"10px":"", marginLeft:"5%"}}>
                         <Typography sx={{background:"#30589E", maxWidth:"263px", borderRadius:"2px", color:"white", padding:"15px 20px", fontSize:is1060?"0.9rem":"1rem", fontWeight:"600", }}>
 
@@ -48,6 +50,7 @@ export const Guia = () =>{
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="currentColor"><path d="M15.5553 0.670898H5.77756C5.53189 0.670898 5.3331 0.86969 5.3331 1.11536C5.3331 1.36102 5.53189 1.55982 5.77756 1.55982H14.4824L0.129975 15.9122C-0.0436504 16.0859 -0.0436504 16.3671 0.129975 16.5407C0.216766 16.6275 0.330516 16.6709 0.444225 16.6709C0.557933 16.6709 0.671641 16.6275 0.758475 16.5407L15.1109 2.18827V10.8931C15.1109 11.1388 15.3097 11.3376 15.5553 11.3376C15.801 11.3376 15.9998 11.1388 15.9998 10.8931V1.11536C15.9998 0.86969 15.801 0.670898 15.5553 0.670898Z" fill="currentColor"></path></svg>
                         </Typography>
                     </Box>
+                    </Link>
           </Box>
         
       </Grid>
