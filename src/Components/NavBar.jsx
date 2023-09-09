@@ -223,8 +223,8 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
               src={LogoBost}
               onClick={handleLetsLogoClick}
               cursor="pointer"
-              width={is600?"100%":"100%"}
-              height={is600?"100%":"100%"}
+              width={is600?"110px":"100%"}
+              height={is600?"50px":"100%"}
             />
             </div></Link>
             {isMobile ? (
