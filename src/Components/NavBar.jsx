@@ -9,6 +9,8 @@ import Menu from "../assets/Menu.svg"
 import Close from "../assets/Close.svg"
 import SearchIcon from '@mui/icons-material/Search';
 
+import { Link } from 'react-router-dom';
+
 import { Box } from "@mui/material";
 
 
@@ -214,7 +216,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
       <DivNavbarWrapper>
         <DivNavbar>
           <Frame>
-            
+          <Link to="/" style={{ textDecoration: 'none' }}>
           <div style={{ cursor: "pointer" }}>
             <ElementLogoTurquesaSin
               alt="Element logo turquesa sin"
@@ -222,9 +224,9 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
               onClick={handleLetsLogoClick}
               cursor="pointer"
               width={is600?"100%":"100%"}
-              height={is600?"40px":"100%"}
+              height={is600?"100%":"100%"}
             />
-            </div>
+            </div></Link>
             {isMobile ? (
               <>
                 <MobileButton onClick={handleToggleMenu}>
@@ -234,8 +236,10 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
                 {showMenu && (
                   <DropdownMenu>
                     <DropdownContent>
+                    <Link to="/contact" style={{ textDecoration: 'none' }}>
                       <MobileTextWrapper onClick={() => { handleLetsWorkClick(); handleToggleMenu(); }} pointer>
                         Contacto</MobileTextWrapper>
+                        </Link>
                       
                       <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
                       <ButtonStyled onClick={ () => {handleLetsChatClick(); handleToggleMenu()}}>
@@ -249,10 +253,11 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
               </>
             ) : (
               <Div>
-               
+               <Link to="/contact" style={{ textDecoration: 'none' }}>
                 <div style={{ cursor: "pointer" }}>
+                  
                 <TextWrapper onClick={handleLetsWorkClick}>
-                  Contacto</TextWrapper></div>
+                  Contacto</TextWrapper></div></Link>
                   <div style={{ cursor: "pointer" }}>
                 </div>
                 <RoundButton>
