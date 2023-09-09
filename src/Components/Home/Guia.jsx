@@ -17,8 +17,8 @@ export const Guia = () =>{
         
           <Box
           data-aos="fade"
-          data-aos-duration={1500}
-          data-aos-delay="200"
+          data-aos-duration={800}
+          data-aos-delay="300"
            sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
             <Box sx={{display:"flex", justifyContent:"center", width:"100%", marginTop:is620?"40px":"160px"}}>
                 
@@ -39,8 +39,8 @@ export const Guia = () =>{
 
             <Box
             data-aos="fade"
-            data-aos-duration={1500}
-            data-aos-delay="300"
+            data-aos-duration={800}
+            data-aos-delay="400"
             sx={{display:"flex", position:"", marginTop:"32px", zIndex:"2", cursor:"pointer", justifyContent:"start", marginBottom:is620?"10px":"", marginLeft:"5%"}}>
                         <Typography sx={{background:"#30589E", maxWidth:"263px", borderRadius:"2px", color:"white", padding:"15px 20px", fontSize:is1060?"0.9rem":"1rem", fontWeight:"600", }}>
 
@@ -57,8 +57,8 @@ export const Guia = () =>{
         
           <Box
           data-aos="fade"
-          data-aos-duration={1500}
-          data-aos-delay="350"
+          data-aos-duration={1000}
+          data-aos-delay="500"
            sx={{display:"flex", justifyContent:"center", alignItems:"center", width:"100%", height:"100%"}}>
             <img style={{width:"90%", maxWidth:"488px"}} src={GuiaImg} alt="GuiaImg" />
           </Box>
