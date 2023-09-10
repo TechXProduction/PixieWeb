@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
@@ -12,7 +13,7 @@ const DividendCalculator = () => {
   const [annualReturnRate, setAnnualReturnRate] = useState(0.22);
   const [taxRate, setTaxRate] = useState(0.0183);
   const [incomeTaxRate, setIncomeTaxRate] = useState(0.20);
-  const [years, setYears] = useState(12);
+  const [years, setYears] = useState(1);
 
   const [results, setResults] = useState([]);
   const [totalDividend, setTotalDividend] = useState(0);
@@ -56,6 +57,9 @@ const DividendCalculator = () => {
   };
 
   return (
+    <>
+    <Box sx={{display:"flex", justifyContent:"center"}}>
+        <Box sx={{display:"flex", width:"80%"}}> 
     <div>
       <h1>Dividend Calculator</h1>
       <div>
@@ -94,6 +98,46 @@ const DividendCalculator = () => {
         Calculate Dividends
       </Button>
       <div>
+        <Box sx={{width:"100%", maxWidth:"450px"}}>
+      <Table>
+      <TableHead>
+      <TableRow>
+        <TableCell></TableCell>
+        <TableCell></TableCell>
+      </TableRow>
+      </TableHead>
+      <TableBody>
+
+      <TableRow>
+         <TableCell>MONTO INICIAL</TableCell>
+      <TableCell>$ {initialInvestment}</TableCell>
+      </TableRow>
+     
+      <TableRow>
+         <TableCell>TASA DE RENDIMIENTO ANUAL COMPUESTO</TableCell>
+      <TableCell>{annualReturnRate*100}%</TableCell>
+      </TableRow>
+
+      <TableRow>
+         <TableCell>DIVIDENDO promedio MENSUAL </TableCell>
+      <TableCell>$ {((totalDividend.toFixed(2))/(years*12)).toFixed(2)}</TableCell>
+      </TableRow>
+
+      <TableRow>
+         <TableCell>MONTO FINAL  BRUTO </TableCell>
+      <TableCell>$ {(totalDividend + initialInvestment).toFixed(2)}</TableCell>
+      </TableRow>
+
+      <TableRow>
+         <TableCell>IMPUESTO (ISR) </TableCell>
+      <TableCell>{incomeTaxRate*100}%</TableCell>
+      </TableRow>
+
+      </TableBody>
+      </Table>
+      </Box>
+
+
         <Table>
           <TableHead>
             <TableRow>
@@ -118,18 +162,21 @@ const DividendCalculator = () => {
             ))}
             <TableRow>
               <TableCell colSpan={6} align="right">
-                <strong>TOTALES</strong>
+                
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell></TableCell>
+              <TableCell><strong>TOTALES</strong></TableCell>
               <TableCell>
                 <strong>${totalDividend.toFixed(2)}</strong>
               </TableCell>
               <TableCell></TableCell>
+              
+              
               <TableCell>
                 <strong>${totalTax.toFixed(2)}</strong>
               </TableCell>
+              <TableCell></TableCell>
               <TableCell>
                 <strong>${totalNetDividend.toFixed(2)}</strong>
               </TableCell>
@@ -139,6 +186,9 @@ const DividendCalculator = () => {
         </Table>
       </div>
     </div>
+    </Box>
+    </Box>
+    </>
   );
 };
 
