@@ -4,6 +4,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import BackgroundImg from "../../assets/contador.jpg"
+
 export const InfoGrid = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -36,7 +38,7 @@ export const InfoGrid = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url('https://pixiebr.com/wp-content/uploads/2023/03/image-bg.jpg')`,
+        backgroundImage: `url('${BackgroundImg}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '50vh',

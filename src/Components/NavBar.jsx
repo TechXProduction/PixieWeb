@@ -236,6 +236,10 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
                 {showMenu && (
                   <DropdownMenu>
                     <DropdownContent>
+                    <Link to="/calculate" style={{ textDecoration: 'none' }}>
+                      <MobileTextWrapper onClick={() => { handleLetsWorkClick(); handleToggleMenu(); }} pointer>
+                        Simulador de rendimiento</MobileTextWrapper>
+                        </Link>
                     <Link to="/contact" style={{ textDecoration: 'none' }}>
                       <MobileTextWrapper onClick={() => { handleLetsWorkClick(); handleToggleMenu(); }} pointer>
                         Contacto</MobileTextWrapper>
@@ -253,11 +257,21 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
               </>
             ) : (
               <Div>
+                <Box sx={{display:"flex"}}>
+                  <Link to="/calculate" style={{ textDecoration: 'none' }}>
+                <div style={{ cursor: "pointer" }}>
+                  
+                <TextWrapper onClick={handleLetsWorkClick}>
+                  Simulador de rendimiento</TextWrapper></div></Link>
+
                <Link to="/contact" style={{ textDecoration: 'none' }}>
                 <div style={{ cursor: "pointer" }}>
                   
                 <TextWrapper onClick={handleLetsWorkClick}>
                   Contacto</TextWrapper></div></Link>
+                </Box>
+
+                
                   <div style={{ cursor: "pointer" }}>
                 </div>
                 <RoundButton>
