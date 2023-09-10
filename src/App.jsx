@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme/theme';
 import { Home } from './Components/Home/Home';
 import { Contact } from './Components/Contact';
+import DividendCalculator from './Components/Home/Calculadora';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/calculate' element={<DividendCalculator />} />
             {/* Otras rutas pueden agregarse aquí */}
           </Routes>
         </BrowserRouter>
